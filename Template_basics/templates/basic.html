@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<h1>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{name}}</h1>
+    <h2>{{letters}}</h2>
+    <h2>{{puppy_dict['puppy_name']}}</h2>
+    <ul>
+        {% for each_puppy in puppy_list %}
+            <li>{{each_puppy}}</li>
+        {% endfor %}
+    </ul>
+    {% if 'Rufus' in puppy_list %}
+        <p>Found the puppy</p>
+    {% endif %}
+</body>
+</html>

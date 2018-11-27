@@ -1,0 +1,1 @@
+1. debug = true ->open the console in the explorer and with the debugger pin debug the error
