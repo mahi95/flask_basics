@@ -1,16 +1,19 @@
 {% extends 'base.html' %}
-{% block content %}
+{% block context %}
     <div class="jumbotron">
         <p>Let's see how you performed</p>
         {% if is_passed %}
-            <p>Your user name  passed the  three requirements</p>
+            <p>Your username have passed all the requirements</p>
         {% else %}
-            <p>Oh No! looks like you have issues with your user name</p>
-            <ul>
-                {% for each_failed_case in failed_list %}
-                    <li>{{each_failed_case}}</li>
-                {% endfor %}
-            </ul>
+            <p>Oh No! you user name encountered with some issues</p>
+            {% if not is_lower %}
+                <p>You didnot use an lowercase letter</p>
+            {% endif %}
+            {% if not is_upper %}
+                <p>You didnot use an uppercase letter</p>
+            {% endif %}
+            {% if not is_numb %}
+                <p>You didnot use a number at the end</p>
+            {% endif %}
         {% endif %}
     </div>
-{% endblock %}
